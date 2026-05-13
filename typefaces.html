@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Typefaces | Nolan Matúš Willems</title><link rel="stylesheet" href="https://use.typekit.net/swh4lwj.css" />
+    <link rel="stylesheet" href="styles.css" /></head>
+  <body data-project="typefaces">
+    <main class="project-detail" data-project-root></main>
+   <script src="script.js"></script>
+
+    <script src="https://unpkg.com/lenis@1.1.19/dist/lenis.min.js"></script>
+
+<script>
+  const lenis = new Lenis({
+    duration: 1,
+    easing: (t) => 1 - Math.pow(1 - t, 5),
+    smoothWheel: true,
+    wheelMultiplier: 0.40,
+    touchMultiplier: 0.75,
+    infinite: false,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
